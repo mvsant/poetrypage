@@ -111,7 +111,7 @@ body {
     background: $card-color;
     min-height: 80vh;
     padding: 1%;
-    margin:1%;
+    margin:1.5%;
     border-radius: 5%;
     h1{
       margin: 2% 1%;
@@ -135,6 +135,7 @@ body {
     order: 5;
     background: $footer-color;
     color:$footer-font-color;
+    min-width: 100%;
     @include for-desktop-up {
         order:5;
     }
@@ -143,7 +144,7 @@ body {
 
   label {
     margin:2% 6%;
-    background-image:url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb_off.png');
+    background-image:url('lightbulb_off.png');
     display:block;
     max-width:32px;
     height:32px;
@@ -153,7 +154,7 @@ body {
   }
   
   input:checked + label {
-    background-image:url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb.png');
+    background-image:url('lightbulb_on.png');
   }
   
   input {

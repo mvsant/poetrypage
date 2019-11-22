@@ -92,7 +92,7 @@ article {
   background: #dadada;
   min-height: 80vh;
   padding: 1%;
-  margin: 1%;
+  margin: 1.5%;
   border-radius: 5%;
 }
 article h1 {
@@ -118,6 +118,7 @@ footer {
   order: 5;
   background: darkslategrey;
   color: white;
+  min-width: 100%;
 }
 @media (min-width: 800px) {
   footer {
@@ -127,7 +128,7 @@ footer {
 
 label {
   margin: 2% 6%;
-  background-image: url("http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb_off.png");
+  background-image: url("lightbulb_off.png");
   display: block;
   max-width: 32px;
   height: 32px;
@@ -136,7 +137,7 @@ label {
 }
 
 input:checked + label {
-  background-image: url("http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb.png");
+  background-image: url("lightbulb_on.png");
 }
 
 input {
