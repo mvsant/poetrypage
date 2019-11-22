@@ -1,0 +1,188 @@
+$main-background: white;
+$article-font-color: darkslategrey;
+$card-color: #dadada;
+$footer-font-color: white;
+$footer-color: darkslategrey;
+$nav-font-color: #222;
+$nav-font-color-hover: #111;
+$nav-border-hover:5%;
+
+$trans: 1s;
+
+$darker-main-background: #222;
+$darker-article-font-color: white;
+$darker-card-color: #444;
+$darker-footer-font-color: #222;
+$darker-footer-color: white;
+$darker-nav-font-color: #222;
+$darker-nav-font-color-hover: #111;
+$darker-nav-border-hover:5%;
+
+@mixin for-desktop-up {
+    @media (min-width: 800px) { @content; }
+  } 
+
+
+
+  *{
+    transition:$trans;
+    border:0;
+    margin:0;
+    padding:0;
+    color: $article-font-color;
+  }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    background: $main-background;
+    * {
+        flex: 1 100%;
+      }
+  }
+
+  header {
+    order: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    h1{
+      margin: 2% 1%;
+    }
+    @include for-desktop-up {
+      order: 1;
+    }
+  }
+
+  nav {
+    order: 2;
+    ul {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        width: 100%;
+        background: $card-color;
+        margin: 0;
+        padding: 2%;
+        margin-top: .5%;
+      }
+    li {
+        display: block;
+        flex: 0 1 auto; /* Default */
+        list-style-type: none;
+        background: pink;
+        border-radius: 50%;
+        color: $nav-font-color;
+    }
+    @include for-desktop-up {
+      order:2;
+      li:hover {
+        color: $nav-font-color-hover;
+        transition-duration: $trans;
+        transform: scale(1.4);
+        border-radius: $nav-border-hover;
+      }
+    }
+  }
+
+  aside{
+    order: 4;
+    @include for-desktop-up {
+        max-width: 20vw;
+        flex: 1 0 0;
+        order: 3;
+      }
+      ul{
+        margin-top: 10%;
+        padding: 2%;
+      }
+      li{
+        list-style-type: none; 
+        margin-top: 5%;
+      }
+  }
+  
+  article {
+    order: 3;
+    text-align: left;
+    background: $card-color;
+    min-height: 80vh;
+    padding: 1%;
+    margin:1%;
+    border-radius: 5%;
+    h1{
+      margin: 2% 1%;
+    }
+    h1::first-letter {
+      font-size: 200%;
+  }
+  p{
+    margin: 2% 1%;
+  }
+  p::first-letter {
+  font-size: 200%;
+  }
+    @include for-desktop-up {
+        flex: 1 0 0;
+        order: 4;
+      }
+  }
+
+  footer {
+    order: 5;
+    background: $footer-color;
+    color:$footer-font-color;
+    @include for-desktop-up {
+        order:5;
+    }
+  }
+
+
+  label {
+    margin:2% 6%;
+    background-image:url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb_off.png');
+    display:block;
+    max-width:32px;
+    height:32px;
+    cursor:pointer;
+    position:relative;
+    
+  }
+  
+  input:checked + label {
+    background-image:url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb.png');
+  }
+  
+  input {
+    display:none;
+  }
+
+
+
+  .dark-bg { 
+      background:$darker-main-background;
+      * {
+        color: $darker-article-font-color;
+      }
+      article{ 
+        background: $darker-card-color;
+      }
+      nav ul {
+        background: $darker-card-color;
+        li {
+          color: $darker-nav-font-color;
+        }
+        @include for-desktop-up {
+          li:hover {
+            color: $darker-nav-font-color-hover;
+          }
+      }
+    }
+      footer {
+        background: $darker-footer-color;
+        color: $darker-footer-font-color;
+      }
+  }

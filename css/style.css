@@ -1,0 +1,171 @@
+* {
+  transition: 1s;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: darkslategrey;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  background: white;
+}
+body * {
+  flex: 1 100%;
+}
+
+header {
+  order: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+header h1 {
+  margin: 2% 1%;
+}
+@media (min-width: 800px) {
+  header {
+    order: 1;
+  }
+}
+
+nav {
+  order: 2;
+}
+nav ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 100%;
+  background: #dadada;
+  margin: 0;
+  padding: 2%;
+  margin-top: 0.5%;
+}
+nav li {
+  display: block;
+  flex: 0 1 auto;
+  /* Default */
+  list-style-type: none;
+  background: pink;
+  border-radius: 50%;
+  color: #222;
+}
+@media (min-width: 800px) {
+  nav {
+    order: 2;
+  }
+  nav li:hover {
+    color: #111;
+    transition-duration: 1s;
+    transform: scale(1.4);
+    border-radius: 5%;
+  }
+}
+
+aside {
+  order: 4;
+}
+@media (min-width: 800px) {
+  aside {
+    max-width: 20vw;
+    flex: 1 0 0;
+    order: 3;
+  }
+}
+aside ul {
+  margin-top: 10%;
+  padding: 2%;
+}
+aside li {
+  list-style-type: none;
+  margin-top: 5%;
+}
+
+article {
+  order: 3;
+  text-align: left;
+  background: #dadada;
+  min-height: 80vh;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 5%;
+}
+article h1 {
+  margin: 2% 1%;
+}
+article h1::first-letter {
+  font-size: 200%;
+}
+article p {
+  margin: 2% 1%;
+}
+article p::first-letter {
+  font-size: 200%;
+}
+@media (min-width: 800px) {
+  article {
+    flex: 1 0 0;
+    order: 4;
+  }
+}
+
+footer {
+  order: 5;
+  background: darkslategrey;
+  color: white;
+}
+@media (min-width: 800px) {
+  footer {
+    order: 5;
+  }
+}
+
+label {
+  margin: 2% 6%;
+  background-image: url("http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb_off.png");
+  display: block;
+  max-width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+}
+
+input:checked + label {
+  background-image: url("http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb.png");
+}
+
+input {
+  display: none;
+}
+
+.dark-bg {
+  background: #222;
+}
+.dark-bg * {
+  color: white;
+}
+.dark-bg article {
+  background: #444;
+}
+.dark-bg nav ul {
+  background: #444;
+}
+.dark-bg nav ul li {
+  color: #222;
+}
+@media (min-width: 800px) {
+  .dark-bg nav ul li:hover {
+    color: #111;
+  }
+}
+.dark-bg footer {
+  background: white;
+  color: #222;
+}
+
+/*# sourceMappingURL=style.css.map */
