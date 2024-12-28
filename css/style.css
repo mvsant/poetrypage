@@ -48,8 +48,7 @@ nav ul {
 }
 nav li {
   display: block;
-  flex: 0 1 auto;
-  /* Default */
+  flex: 0 1 auto; /* Default */
   list-style-type: none;
   background: pink;
   border-radius: 50%;
@@ -128,7 +127,7 @@ footer {
 
 label {
   margin: 2% 6%;
-  background-image: url("lightbulb_off.png");
+  background-image: url("lightbulb_on.png");
   display: block;
   max-width: 32px;
   height: 32px;
@@ -137,7 +136,7 @@ label {
 }
 
 input:checked + label {
-  background-image: url("lightbulb_on.png");
+  background-image: url("lightbulb_off.png");
 }
 
 input {
@@ -167,6 +166,4 @@ input {
 .dark-bg footer {
   background: white;
   color: #222;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

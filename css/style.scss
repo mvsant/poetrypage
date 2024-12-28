@@ -144,7 +144,7 @@ body {
 
   label {
     margin:2% 6%;
-    background-image:url('lightbulb_off.png');
+    background-image:url('lightbulb_on.png');
     display:block;
     max-width:32px;
     height:32px;
@@ -154,7 +154,7 @@ body {
   }
   
   input:checked + label {
-    background-image:url('lightbulb_on.png');
+    background-image:url('lightbulb_off.png');
   }
   
   input {
